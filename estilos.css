@@ -1,0 +1,100 @@
+:root{
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+
+.multi_bg_example {
+  background-color: var(--Dark-cyan);
+  background-image: url("./images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+  background-attachment:inherit;
+  background-repeat: no-repeat, no-repeat;
+  background-position: -120% 150%, 190% -80%;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+
+h1{
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--Very-dark-desaturated-blue);
+  margin: 0;
+  margin-top: 25px;
+}
+
+h1 span{
+  font-weight: 400;
+  color: var(--Dark-gray);
+  margin-left: 5px;
+}
+
+h2{
+  color: var(--Dark-gray);
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+
+.card{
+  background: aliceblue url('./images/bg-pattern-card.svg') repeat-x;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 375px;
+  min-width: 375px;
+  padding-top: 90px;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin: 60px 0px;
+}
+
+.image {
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  border-top:1px solid var(--Dark-gray);
+  padding: 10px 0;
+}
+
+.social h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.social h3 small{
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+  font-size: 15px;
+  display: block;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 376px) {
+  .multi_bg_example {
+    background-color: var(--Dark-cyan); 
+    background-size: 400px, 400px;
+    background-image: url("./images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -230px -200px, 200px 350px;
+  }
+
+  .card{
+    min-width: 190px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
