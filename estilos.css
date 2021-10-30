@@ -13,10 +13,10 @@ body{
 
 .multi_bg_example {
   background-color: var(--Dark-cyan);
-  background-image: url("./images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+  background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg), hsl(185, 75%, 39%);
+   background-position: right 51vw bottom 37vh,left 50vw top 45vh;
   background-attachment:inherit;
   background-repeat: no-repeat, no-repeat;
-  background-position: -120% 150%, 190% -80%;
   background-attachment: fixed;
   overflow: scroll;
 }
